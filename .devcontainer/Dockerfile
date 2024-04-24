@@ -24,9 +24,19 @@ RUN apt-get update && \
         wget \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
+    
+# Create the working directory
+RUN mkdir /JETCLUSTERING
 
-# Copy your project files
+# Set working directory
+WORKDIR /JETCLUSTERING
+
+# Copy your application files to the container
 COPY . .
+
+# Install Python dependencies
+#RUN pip3 install -r requirements.txt
 
 # Specify the command to run on container start
 CMD ["bash"]
+
