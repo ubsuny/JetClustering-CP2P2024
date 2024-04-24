@@ -8,8 +8,9 @@ The distance```math \(d_{ij}^2\) ```between two particles ```math \(i\)``` and `
 ```math
 d_{ij}^2 = (y_i - y_j)^2 + (\phi_{ij}^{\text{mpi}})^2
 ```
-where ```math \(y_i\)``` and ```math \(y_j\)``` are the rapidities of particles ```\(i\)``` and ```\(j\)``` respectively, and ```\(\phi_{ij}^{\text{mpi}}\)``` is the difference in azimuthal angle in a way that is periodic over ```\(2\pi\)```.
-
+```math
+where ``` \(y_i\)``` and ```math \(y_j\)``` are the rapidities of particles ```\(i\)``` and ```\(j\)``` respectively, and ```\(\phi_{ij}^{\text{mpi}}\)``` is the difference in azimuthal angle in a way that is periodic over ```\(2\pi\)```.
+```
 ### Full rapidity:
 
 The rapidity \(y\) is calculated as:
