@@ -24,12 +24,6 @@ RUN apt-get update && \
         wget \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
-    
-# Create the working directory
-RUN mkdir /JETCLUSTERING
-
-# Set working directory
-WORKDIR /JETCLUSTERING
 
 # Copy your application files to the container
 COPY . .
