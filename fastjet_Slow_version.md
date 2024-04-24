@@ -3,12 +3,12 @@ This code implements a slow jet clustering algorithm using the kt-algorithm with
 
 ### Full k_t-algorithm distance metric:
 
-The distance``` \(d_{ij}^2\) ```between two particles ```\(i\)``` and ```\(j\)``` is calculated as:
+The distance```math \(d_{ij}^2\) ```between two particles ```math \(i\)``` and ```math \(j\)``` is calculated as:
 
 ```math
 d_{ij}^2 = (y_i - y_j)^2 + (\phi_{ij}^{\text{mpi}})^2
 ```
-where ```\(y_i\)``` and ```\(y_j\)``` are the rapidities of particles ```\(i\)``` and ```\(j\)``` respectively, and ```\(\phi_{ij}^{\text{mpi}}\)``` is the difference in azimuthal angle in a way that is periodic over ```\(2\pi\)```.
+where ```math \(y_i\)``` and ```math \(y_j\)``` are the rapidities of particles ```\(i\)``` and ```\(j\)``` respectively, and ```\(\phi_{ij}^{\text{mpi}}\)``` is the difference in azimuthal angle in a way that is periodic over ```\(2\pi\)```.
 
 ### Full rapidity:
 
