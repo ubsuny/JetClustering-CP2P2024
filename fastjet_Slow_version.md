@@ -11,9 +11,22 @@ d_{ij}^2 = (y_i - y_j)^2 + (\phi_{ij}^{\text{mpi}})^2
 ```math
 where ``` (y_i)``` and ``` (y_j)``` are the rapidities of particles ``` (i)``` and ``` (j)``` respectively, and ```\(phi_{ij}^{text{mpi}})``` is the difference in azimuthal angle in a way that is periodic over ```(2 pi)```.
 ```
-### Full rapidity:
+### ## Full k_t-algorithm distance metric:
 
-The rapidity \(y\) is calculated as:
+The distance d_{ij}^2 between two particles i and j is calculated as:
+
+d_{ij}^2 = (y_i - y_j)^2 + (φ_{ij}^{mpi})^2
+
+where y_i and y_j are the rapidities of particles i and j respectively, and φ_{ij}^{mpi} is the difference in azimuthal angle in a way that is periodic over 2π.
+
+## Full rapidity:
+
+The rapidity y is calculated as:
+
+y = 1/2 * ln((E + p_z) / (E - p_z))
+
+where E is the energy of the particle and p_z is its longitudinal momentum.
+
 
 \[
 y = \frac{1}{2} \ln \left( \frac{E + p_z}{E - p_z} \right)
