@@ -1,0 +1,468 @@
+#--------------------------------------------------------------------------
+#                         FastJet release 3.4.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the GNU GPL v2 or higher.  
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code,
+# CGAL and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+##-----------Slow Version Results-------------##
+Clustered with  Longitudinally invariant kt algorithm with R = 0.7 and E scheme recombination
+jet 0: pt = 1961.6970635094099, y = 0.0005484007789314054, phi = 1.0411067854466045
+    constituent 0's pt: 102.05239169629512
+    constituent 1's pt: 87.06838155044083
+    constituent 2's pt: 84.48968252583823
+    constituent 3's pt: 58.42268007031746
+    constituent 4's pt: 101.20802570570667
+    constituent 5's pt: 93.15011966992289
+    constituent 6's pt: 38.12189113584114
+    constituent 7's pt: 114.40928798738861
+    constituent 8's pt: 95.44406311242473
+    constituent 9's pt: 36.842810589430535
+    constituent 10's pt: 89.02537837656799
+    constituent 11's pt: 79.47321411729243
+    constituent 12's pt: 42.46407782674212
+    constituent 13's pt: 94.62515393152479
+    constituent 14's pt: 135.43014418941863
+    constituent 15's pt: 87.75159996327193
+    constituent 16's pt: 91.54349614717636
+    constituent 17's pt: 126.49671531463107
+    constituent 18's pt: 66.83561567150636
+    constituent 19's pt: 101.0624125778638
+    constituent 20's pt: 50.949205164488525
+    constituent 21's pt: 114.53945717396482
+    constituent 22's pt: 107.74644531568973
+    constituent 23's pt: 118.91446494723394
+jet 1: pt = 1741.7941135490776, y = 0.0050838582933006886, phi = 5.463682526259111
+    constituent 0's pt: 92.56092410681565
+    constituent 1's pt: 102.98637947914249
+    constituent 2's pt: 84.66244359499375
+    constituent 3's pt: 62.383757763929786
+    constituent 4's pt: 56.44295410636526
+    constituent 5's pt: 88.67879826312858
+    constituent 6's pt: 81.93439007561467
+    constituent 7's pt: 115.25831123873385
+    constituent 8's pt: 73.60408177319621
+    constituent 9's pt: 71.56537528277279
+    constituent 10's pt: 73.53523465120892
+    constituent 11's pt: 64.3065825993707
+    constituent 12's pt: 122.20028857907349
+    constituent 13's pt: 54.05958892710113
+    constituent 14's pt: 27.92701160392209
+    constituent 15's pt: 125.7555060505849
+    constituent 16's pt: 59.53327771348879
+    constituent 17's pt: 43.699141880392666
+    constituent 18's pt: 56.48125335148649
+    constituent 19's pt: 103.97011171702599
+    constituent 20's pt: 65.50552590109399
+    constituent 21's pt: 112.83759351958699
+    constituent 22's pt: 77.35073715486726
+jet 2: pt = 1407.4442386772698, y = 0.0010987248382567623, phi = 2.5204828796125778
+    constituent 0's pt: 112.20299172635295
+    constituent 1's pt: 78.94594443510196
+    constituent 2's pt: 73.78681527500588
+    constituent 3's pt: 54.82495489736341
+    constituent 4's pt: 73.72973428504295
+    constituent 5's pt: 44.1650936285638
+    constituent 6's pt: 110.82443213287166
+    constituent 7's pt: 68.62956804346642
+    constituent 8's pt: 104.8271870784809
+    constituent 9's pt: 69.32290827241707
+    constituent 10's pt: 68.53549459579271
+    constituent 11's pt: 45.8047928424721
+    constituent 12's pt: 112.43224536460951
+    constituent 13's pt: 37.900867320411805
+    constituent 14's pt: 65.33890875661405
+    constituent 15's pt: 43.18672725317823
+    constituent 16's pt: 80.96729003923224
+    constituent 17's pt: 118.33154802741791
+    constituent 18's pt: 70.24776133832688
+    constituent 19's pt: 89.6956509894317
+jet 3: pt = 459.42138623700924, y = -0.06261334931878475, phi = 0.3147339654688768
+    constituent 0's pt: 109.61139825044539
+    constituent 1's pt: 49.02125711934643
+    constituent 2's pt: 101.5668945932665
+    constituent 3's pt: 10.739097295936638
+    constituent 4's pt: 39.29980807073452
+    constituent 5's pt: 89.79501178028318
+    constituent 6's pt: 62.728554868003116
+jet 4: pt = 80.56761732101043, y = 0.11402542618235541, phi = 1.9556060293832196
+    constituent 0's pt: 80.56761732101043
+jet 5: pt = 1465.1500864808265, y = -0.007580466654201161, phi = 3.9568971407150344
+    constituent 0's pt: 103.14537619807648
+    constituent 1's pt: 98.03719551613567
+    constituent 2's pt: 70.98715283245465
+    constituent 3's pt: 46.008538712946006
+    constituent 4's pt: 99.34389811529947
+    constituent 5's pt: 92.89489184975174
+    constituent 6's pt: 101.57994737399365
+    constituent 7's pt: 105.31527031497448
+    constituent 8's pt: 89.9754154478955
+    constituent 9's pt: 94.33431614281935
+    constituent 10's pt: 64.11264155019782
+    constituent 11's pt: 20.798859665651523
+    constituent 12's pt: 9.556845921308057
+    constituent 13's pt: 111.02840796889683
+    constituent 14's pt: 66.65523339652177
+    constituent 15's pt: 112.23315822426957
+    constituent 16's pt: 42.31490922547661
+    constituent 17's pt: 49.502635853932894
+    constituent 18's pt: 62.678718531624185
+    constituent 19's pt: 108.55666045415809
+jet 6: pt = 292.82080597370765, y = -0.03606435761810041, phi = 4.854961488435739
+    constituent 0's pt: 62.106517476586276
+    constituent 1's pt: 79.37215423292542
+    constituent 2's pt: 85.33268440533608
+    constituent 3's pt: 66.6831227795637
+jet 7: pt = 5.975902838362836, y = -0.7829202423207626, phi = 1.8881040220415117
+    constituent 0's pt: 5.975902838362836
+Slow clustering runtime: 0.001337 seconds
+##-------------fastjet Results-------------##
+Clustered with Longitudinally invariant kt algorithm with R = 0.7 and E scheme recombination
+        pt y phi
+jet 0: 2039.4007642340755 -0.009218524187701235 0.7199576733456259
+    constituent 0's pt: 49.02125711934643
+    constituent 1's pt: 59.53327771348879
+    constituent 2's pt: 101.5668945932665
+    constituent 3's pt: 62.728554868003116
+    constituent 4's pt: 39.29980807073452
+    constituent 5's pt: 89.79501178028318
+    constituent 6's pt: 58.42268007031746
+    constituent 7's pt: 93.15011966992289
+    constituent 8's pt: 102.05239169629512
+    constituent 9's pt: 95.44406311242473
+    constituent 10's pt: 10.739097295936638
+    constituent 11's pt: 114.40928798738861
+    constituent 12's pt: 118.91446494723394
+    constituent 13's pt: 109.61139825044539
+    constituent 14's pt: 38.12189113584114
+    constituent 15's pt: 135.43014418941863
+    constituent 16's pt: 42.46407782674212
+    constituent 17's pt: 126.49671531463107
+    constituent 18's pt: 101.0624125778638
+    constituent 19's pt: 87.06838155044083
+    constituent 20's pt: 114.53945717396482
+    constituent 21's pt: 36.842810589430535
+    constituent 22's pt: 79.47321411729243
+    constituent 23's pt: 107.74644531568973
+    constituent 24's pt: 101.20802570570667
+    constituent 25's pt: 66.83561567150636
+jet 1: 1955.749506771943 -0.002244464440722025 5.354391712017821
+    constituent 0's pt: 81.93439007561467
+    constituent 1's pt: 92.56092410681565
+    constituent 2's pt: 77.35073715486726
+    constituent 3's pt: 43.699141880392666
+    constituent 4's pt: 115.25831123873385
+    constituent 5's pt: 73.60408177319621
+    constituent 6's pt: 71.56537528277279
+    constituent 7's pt: 65.50552590109399
+    constituent 8's pt: 73.53523465120892
+    constituent 9's pt: 56.48125335148649
+    constituent 10's pt: 88.67879826312858
+    constituent 11's pt: 122.20028857907349
+    constituent 12's pt: 125.7555060505849
+    constituent 13's pt: 56.44295410636526
+    constituent 14's pt: 112.83759351958699
+    constituent 15's pt: 27.92701160392209
+    constituent 16's pt: 62.383757763929786
+    constituent 17's pt: 84.66244359499375
+    constituent 18's pt: 54.05958892710113
+    constituent 19's pt: 62.106517476586276
+    constituent 20's pt: 79.37215423292542
+    constituent 21's pt: 85.33268440533608
+    constituent 22's pt: 66.6831227795637
+    constituent 23's pt: 103.97011171702599
+    constituent 24's pt: 102.98637947914249
+    constituent 25's pt: 64.3065825993707
+jet 2: 1499.6418110372556 -0.008668011304913785 3.93936415511559
+    constituent 0's pt: 43.18672725317823
+    constituent 1's pt: 94.33431614281935
+    constituent 2's pt: 62.678718531624185
+    constituent 3's pt: 92.89489184975174
+    constituent 4's pt: 105.31527031497448
+    constituent 5's pt: 108.55666045415809
+    constituent 6's pt: 98.03719551613567
+    constituent 7's pt: 101.57994737399365
+    constituent 8's pt: 70.98715283245465
+    constituent 9's pt: 9.556845921308057
+    constituent 10's pt: 89.9754154478955
+    constituent 11's pt: 49.502635853932894
+    constituent 12's pt: 46.008538712946006
+    constituent 13's pt: 64.11264155019782
+    constituent 14's pt: 111.02840796889683
+    constituent 15's pt: 42.31490922547661
+    constituent 16's pt: 103.14537619807648
+    constituent 17's pt: 20.798859665651523
+    constituent 18's pt: 66.65523339652177
+    constituent 19's pt: 99.34389811529947
+    constituent 20's pt: 112.23315822426957
+jet 3: 1019.8784983202287 -0.01339744936396081 1.8590422201970616
+    constituent 0's pt: 89.02537837656799
+    constituent 1's pt: 50.949205164488525
+    constituent 2's pt: 84.48968252583823
+    constituent 3's pt: 94.62515393152479
+    constituent 4's pt: 87.75159996327193
+    constituent 5's pt: 91.54349614717636
+    constituent 6's pt: 44.1650936285638
+    constituent 7's pt: 5.975902838362836
+    constituent 8's pt: 65.33890875661405
+    constituent 9's pt: 68.53549459579271
+    constituent 10's pt: 80.96729003923224
+    constituent 11's pt: 104.8271870784809
+    constituent 12's pt: 37.900867320411805
+    constituent 13's pt: 80.56761732101043
+    constituent 14's pt: 54.82495489736341
+jet 4: 985.1711717948209 0.01637717358287647 2.6983511341097532
+    constituent 0's pt: 68.62956804346642
+    constituent 1's pt: 118.33154802741791
+    constituent 2's pt: 112.20299172635295
+    constituent 3's pt: 110.82443213287166
+    constituent 4's pt: 69.32290827241707
+    constituent 5's pt: 112.43224536460951
+    constituent 6's pt: 78.94594443510196
+    constituent 7's pt: 73.78681527500588
+    constituent 8's pt: 73.72973428504295
+    constituent 9's pt: 70.24776133832688
+    constituent 10's pt: 45.8047928424721
+    constituent 11's pt: 89.6956509894317
+fastjet runtime: 0.000803 seconds
+#--------------------------------------------------------------------------
+#                         FastJet release 3.4.1
+#                 M. Cacciari, G.P. Salam and G. Soyez                  
+#     A software package for jet finding and analysis at colliders      
+#                           http://fastjet.fr                           
+#	                                                                      
+# Please cite EPJC72(2012)1896 [arXiv:1111.6097] if you use this package
+# for scientific work and optionally PLB641(2006)57 [hep-ph/0512210].   
+#                                                                       
+# FastJet is provided without warranty under the GNU GPL v2 or higher.  
+# It uses T. Chan's closest pair algorithm, S. Fortune's Voronoi code,
+# CGAL and 3rd party plugin jet algorithms. See COPYING file for details.
+#--------------------------------------------------------------------------
+##-----------Slow Version Results-------------##
+Clustered with  Longitudinally invariant kt algorithm with R = 0.7 and E scheme recombination
+jet 0: pt = 1021.5945072397232, y = 0.0019431483004646642, phi = 4.084832435041356
+    constituent 0's pt: 89.10986991614313
+    constituent 1's pt: 53.83223967786167
+    constituent 2's pt: 89.31739159952329
+    constituent 3's pt: 95.10125830581747
+    constituent 4's pt: 68.47535819422954
+    constituent 5's pt: 26.630727375923787
+    constituent 6's pt: 45.16821390351828
+    constituent 7's pt: 83.48084250860721
+    constituent 8's pt: 45.22460410839102
+    constituent 9's pt: 40.46472338274713
+    constituent 10's pt: 102.86807364380317
+    constituent 11's pt: 97.71953264832446
+    constituent 12's pt: 77.63378846267526
+    constituent 13's pt: 20.236211648790523
+    constituent 14's pt: 60.16457434749586
+    constituent 15's pt: 95.2628487567609
+jet 1: pt = 1816.9451795971227, y = -0.012566651614036363, phi = 0.8025648465553368
+    constituent 0's pt: 77.56660218321855
+    constituent 1's pt: 66.59695689404737
+    constituent 2's pt: 108.48391684596369
+    constituent 3's pt: 76.8794662865523
+    constituent 4's pt: 45.24098294179974
+    constituent 5's pt: 99.21111899704354
+    constituent 6's pt: 90.51274185760866
+    constituent 7's pt: 97.42032001100138
+    constituent 8's pt: 116.59816821873372
+    constituent 9's pt: 97.36603683185548
+    constituent 10's pt: 115.98731061051473
+    constituent 11's pt: 67.19851613822983
+    constituent 12's pt: 72.47666125922096
+    constituent 13's pt: 6.814932393672762
+    constituent 14's pt: 109.38234499496096
+    constituent 15's pt: 10.454056986920925
+    constituent 16's pt: 74.27764258057677
+    constituent 17's pt: 93.02399087698291
+    constituent 18's pt: 97.80172632872033
+    constituent 19's pt: 83.4681527201684
+    constituent 20's pt: 111.65029413209918
+    constituent 21's pt: 79.0347967994745
+    constituent 22's pt: 104.98406313007526
+jet 2: pt = 826.5375837322306, y = 0.00814595849697195, phi = 2.088889420803505
+    constituent 0's pt: 49.74192125492268
+    constituent 1's pt: 111.09916782509178
+    constituent 2's pt: 71.86246302107945
+    constituent 3's pt: 37.212132106400446
+    constituent 4's pt: 52.153146524920466
+    constituent 5's pt: 125.86239239317952
+    constituent 6's pt: 48.371144865811345
+    constituent 7's pt: 32.42767803242352
+    constituent 8's pt: 108.68222169428572
+    constituent 9's pt: 71.04712134174127
+    constituent 10's pt: 58.80671062883987
+    constituent 11's pt: 72.99565117398588
+jet 3: pt = 1590.9819243354796, y = -0.008982076858836669, phi = 5.286927875370587
+    constituent 0's pt: 105.7448162281029
+    constituent 1's pt: 72.11249959237392
+    constituent 2's pt: 33.34155657260878
+    constituent 3's pt: 100.26851270883697
+    constituent 4's pt: 11.011289436182992
+    constituent 5's pt: 107.98087397785302
+    constituent 6's pt: 33.388832162120615
+    constituent 7's pt: 52.86888667852486
+    constituent 8's pt: 102.74197890231261
+    constituent 9's pt: 77.0502282439387
+    constituent 10's pt: 125.62951540642436
+    constituent 11's pt: 116.54573375223262
+    constituent 12's pt: 102.31231207477724
+    constituent 13's pt: 104.26098992623994
+    constituent 14's pt: 13.212671329612538
+    constituent 15's pt: 45.631036194923055
+    constituent 16's pt: 42.043489621781056
+    constituent 17's pt: 130.53629055636083
+    constituent 18's pt: 38.220936219366415
+    constituent 19's pt: 105.6436164994594
+    constituent 20's pt: 122.74526126340828
+jet 4: pt = 15.21260423662857, y = -0.8813075058169473, phi = 4.762493771022985
+    constituent 0's pt: 9.862160422816554
+    constituent 1's pt: 5.704550483149149
+jet 5: pt = 1114.248243836781, y = -0.005568890410689189, phi = 2.853541260345456
+    constituent 0's pt: 75.1959804685843
+    constituent 1's pt: 44.625071625042125
+    constituent 2's pt: 87.77834236304182
+    constituent 3's pt: 75.5568262047618
+    constituent 4's pt: 63.549175817293296
+    constituent 5's pt: 102.33997567979627
+    constituent 6's pt: 81.34728075111306
+    constituent 7's pt: 115.0490685115596
+    constituent 8's pt: 88.27496622850431
+    constituent 9's pt: 23.619532814602707
+    constituent 10's pt: 94.89324801340176
+    constituent 11's pt: 63.08281585391704
+    constituent 12's pt: 70.28064544840153
+    constituent 13's pt: 87.91386786251452
+    constituent 14's pt: 99.82863529572911
+jet 6: pt = 558.7392170551461, y = 0.0046444177334716485, phi = 0.012776825045540582
+    constituent 0's pt: 33.73364453351728
+    constituent 1's pt: 80.50075287743736
+    constituent 2's pt: 37.941096907638695
+    constituent 3's pt: 85.6153420075916
+    constituent 4's pt: 91.24246019528672
+    constituent 5's pt: 65.70468376443141
+    constituent 6's pt: 32.833291379469784
+    constituent 7's pt: 28.86291991205218
+    constituent 8's pt: 54.15435360841122
+    constituent 9's pt: 60.88866562755412
+jet 7: pt = 118.20422466502049, y = 0.05392901328064856, phi = 2.4248763323785663
+    constituent 0's pt: 118.20422466502049
+Slow clustering runtime: 0.001024 seconds
+##-------------fastjet Results-------------##
+Clustered with Longitudinally invariant kt algorithm with R = 0.7 and E scheme recombination
+        pt y phi
+jet 0: 2148.4268137504478 -0.0067928179037975815 0.6137334639525182
+    constituent 0's pt: 67.19851613822983
+    constituent 1's pt: 74.27764258057677
+    constituent 2's pt: 77.56660218321855
+    constituent 3's pt: 116.59816821873372
+    constituent 4's pt: 66.59695689404737
+    constituent 5's pt: 108.48391684596369
+    constituent 6's pt: 72.47666125922096
+    constituent 7's pt: 93.02399087698291
+    constituent 8's pt: 33.73364453351728
+    constituent 9's pt: 65.70468376443141
+    constituent 10's pt: 32.833291379469784
+    constituent 11's pt: 80.50075287743736
+    constituent 12's pt: 45.24098294179974
+    constituent 13's pt: 54.15435360841122
+    constituent 14's pt: 91.24246019528672
+    constituent 15's pt: 37.941096907638695
+    constituent 16's pt: 85.6153420075916
+    constituent 17's pt: 28.86291991205218
+    constituent 18's pt: 76.8794662865523
+    constituent 19's pt: 97.80172632872033
+    constituent 20's pt: 115.98731061051473
+    constituent 21's pt: 104.98406313007526
+    constituent 22's pt: 99.21111899704354
+    constituent 23's pt: 97.36603683185548
+    constituent 24's pt: 109.38234499496096
+    constituent 25's pt: 97.42032001100138
+    constituent 26's pt: 6.814932393672762
+    constituent 27's pt: 111.65029413209918
+    constituent 28's pt: 83.4681527201684
+    constituent 29's pt: 79.0347967994745
+jet 1: 1573.076087276479 -0.010634774434846155 5.330246895012892
+    constituent 0's pt: 100.26851270883697
+    constituent 1's pt: 60.88866562755412
+    constituent 2's pt: 125.62951540642436
+    constituent 3's pt: 33.34155657260878
+    constituent 4's pt: 116.54573375223262
+    constituent 5's pt: 107.98087397785302
+    constituent 6's pt: 130.53629055636083
+    constituent 7's pt: 42.043489621781056
+    constituent 8's pt: 122.74526126340828
+    constituent 9's pt: 105.6436164994594
+    constituent 10's pt: 72.11249959237392
+    constituent 11's pt: 105.7448162281029
+    constituent 12's pt: 102.74197890231261
+    constituent 13's pt: 11.011289436182992
+    constituent 14's pt: 52.86888667852486
+    constituent 15's pt: 33.388832162120615
+    constituent 16's pt: 38.220936219366415
+    constituent 17's pt: 102.31231207477724
+    constituent 18's pt: 104.26098992623994
+    constituent 19's pt: 13.212671329612538
+    constituent 20's pt: 45.631036194923055
+jet 2: 1559.6780845957692 0.0161383484626576 2.2522566503754913
+    constituent 0's pt: 44.625071625042125
+    constituent 1's pt: 88.27496622850431
+    constituent 2's pt: 102.33997567979627
+    constituent 3's pt: 118.20422466502049
+    constituent 4's pt: 87.91386786251452
+    constituent 5's pt: 115.0490685115596
+    constituent 6's pt: 87.77834236304182
+    constituent 7's pt: 63.549175817293296
+    constituent 8's pt: 90.51274185760866
+    constituent 9's pt: 49.74192125492268
+    constituent 10's pt: 72.99565117398588
+    constituent 11's pt: 52.153146524920466
+    constituent 12's pt: 48.371144865811345
+    constituent 13's pt: 32.42767803242352
+    constituent 14's pt: 58.80671062883987
+    constituent 15's pt: 108.68222169428572
+    constituent 16's pt: 111.09916782509178
+    constituent 17's pt: 37.212132106400446
+    constituent 18's pt: 125.86239239317952
+    constituent 19's pt: 71.86246302107945
+    constituent 20's pt: 71.04712134174127
+jet 3: 1204.2259015965014 -0.027333929729375758 3.539361006080692
+    constituent 0's pt: 23.619532814602707
+    constituent 1's pt: 63.08281585391704
+    constituent 2's pt: 99.82863529572911
+    constituent 3's pt: 75.1959804685843
+    constituent 4's pt: 75.5568262047618
+    constituent 5's pt: 81.34728075111306
+    constituent 6's pt: 94.89324801340176
+    constituent 7's pt: 70.28064544840153
+    constituent 8's pt: 68.47535819422954
+    constituent 9's pt: 20.236211648790523
+    constituent 10's pt: 83.48084250860721
+    constituent 11's pt: 89.10986991614313
+    constituent 12's pt: 45.22460410839102
+    constituent 13's pt: 89.31739159952329
+    constituent 14's pt: 60.16457434749586
+    constituent 15's pt: 102.86807364380317
+    constituent 16's pt: 53.83223967786167
+    constituent 17's pt: 97.71953264832446
+jet 4: 449.6670133904898 0.05059493795900594 4.576850986203608
+    constituent 0's pt: 77.0502282439387
+    constituent 1's pt: 26.630727375923787
+    constituent 2's pt: 40.46472338274713
+    constituent 3's pt: 77.63378846267526
+    constituent 4's pt: 95.10125830581747
+    constituent 5's pt: 45.16821390351828
+    constituent 6's pt: 95.2628487567609
+jet 5: 15.21260423662857 -0.8813075058169473 4.762493771022985
+    constituent 0's pt: 9.862160422816554
+    constituent 1's pt: 5.704550483149149
+jet 6: 10.454056986920925 -0.732746332475053 1.0668943430633007
+    constituent 0's pt: 10.454056986920925
+fastjet runtime: 0.000570 seconds
