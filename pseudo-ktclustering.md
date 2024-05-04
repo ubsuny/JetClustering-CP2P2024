@@ -1,3 +1,5 @@
+This Pseudo code aims to implement a slow version of fastjet library kt-algorithm to perform jet clustering 
+
 ```
 Data: Particle(pt, eta, phi)
 
