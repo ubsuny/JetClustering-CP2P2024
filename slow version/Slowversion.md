@@ -110,4 +110,7 @@ for i, jet in enumerate(slow_jets):
 # Runtime Comparison:
 
 runtime was calculated for both jet clustering methods and it appeared that the slow version took much longer to perform the clustering while fastjet library took much more smaller time due to optimizated built in function that allow very fast processing. 
- 
+```
+ Slow clustering runtime: 5.744041 seconds
+ fastjet runtime: 0.000552 seconds
+ ```
