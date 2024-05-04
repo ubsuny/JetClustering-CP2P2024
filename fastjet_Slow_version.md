@@ -28,22 +28,16 @@ where:
 
 The rapidity y is calculated as:
 
-$y = 1/2 * ln((E + p_z) / (E - p_z))$
-
-where E is the energy of the particle and $p_z% is its longitudinal momentum.
-
-
 \[
 $y = \frac{1}{2} \ln \left( \frac{E + p_z}{E - p_z} \right)$
 \]
 
-where \(E\) is the energy of the particle and \(p_z\) is its longitudinal momentum.
-
+where $E$ is the energy of the particle and $p_z$ is its longitudinal momentum.
 
 ## Key Features:
 Implements the kt-algorithm distance metric for jet clustering.
 Uses full rapidity information for particles.
-Provides a basic framework for understanding jet inding algorithms.
+Provides a basic framework for understanding jet-finding algorithms.
 
 ## Limitations:
 Slow performance: The implementation uses nested loops and explicit distance calculations, making it computationally expensive for large event sizes.
