@@ -1,4 +1,4 @@
-import input
+from input_module import *
 
 ##-----------------------Slow version--------------------------##
 # Define phi_mpi_pi function to handle the periodicity of the azimuthal angle
