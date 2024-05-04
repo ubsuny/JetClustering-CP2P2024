@@ -27,6 +27,7 @@ K-means Algorithm: Less common in jet clustering, but can be used in specific c
 ##Fastjet:
 it is a C++ library used for jet finding in high-energy physics analyses.
 It provides efficient and robust algorithms for jet clustering.
+It has a python version 
 
 ## Popular Jet clustering algorithms:
 ### Kt-Algorithm: 
@@ -37,7 +38,7 @@ The `kt_algorithm` is a sequential clustering algorithm used for jet finding. It
 #### Parameters
 
 The `kt_algorithm` takes one parameter:
-- **Radius \( R \)**: The radius parameter \( R \) defines the distance scale for clustering. Particles within a distance \( R \) are considered close enough to be merged into a jet.
+- **Radius $(R)$**: The radius parameter $(R)$ defines the distance scale for clustering. Particles within a distance $(R)$ are considered close enough to be merged into a jet.
 
 #### Algorithm
 
