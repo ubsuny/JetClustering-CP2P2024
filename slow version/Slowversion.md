@@ -7,63 +7,62 @@
  This document describes the implementation of a slow version of fastjet library to perform jet clustering and runtime comparison of: a slow version implemented from scratch and a fast version using the FastJet library.
 
  ### kt_Algorithm [1](https://arxiv.org/abs/1111.6097), [3](https://arxiv.org/pdf/0808.0792):
- The generalized \(k_t\) algorithm is a jet clustering algorithm that defines a distance measure between particles \(i\) and \(j\) as follows:
- \[
-d_{ij} = \min\left(p_{ti}^{p}, p_{tj}^{p}\right) \frac{\Delta_{ij}^2}{R^2}
-\]
+ The generalized $k_t$ algorithm is a jet clustering algorithm that defines a distance measure between particles $(i)$ and $(j)$ as follows:
+ 
+$d_{ij} = \min\left(p_{ti}^{p}, p_{tj}^{p}\right) \frac{\Delta_{ij}^2}{R^2}$
 
 where:
-- \(p_{ti}\) and \(p_{tj}\) are the transverse momenta of particles \(i\) and \(j\) respectively.
-- \(\Delta_{ij}\) is the distance between particles \(i\) and \(j\) in the rapidity-azimuth plane.
-- \(R\) is the radius parameter.
-- \(p\) is the power parameter. 
+- $p_{ti}$ and $p_{tj}$ are the transverse momenta of particles $(i)$ and $(j)$ respectively.
+- $\Delta_{ij}$ is the distance between particles $(i)$ and $(j)$ in the rapidity-azimuth plane.
+- $(R)$ is the radius parameter.
+- $(p)$ is the power parameter. 
 
-The distance \(\Delta_{ij}\) is calculated using the following equation:
+The distance $\Delta_{ij}$ is calculated using the following equation:
 
-\[
-\Delta_{ij}^2 = (\y_i - \y_j)^2 + \left(\phi_i - \phi_j\right)^2
-\]
+[
+$\Delta_{ij}^2 = (\y_i - \y_j)^2 + \left(\phi_i - \phi_j\right)^2$
+]
 
 where:
-- \(\y_i\) and \(\y_j\) are the rapidity values of particles \(i\) and \(j\) respectively.
-- \(\phi_i\) and \(\phi_j\) are the azimuthal angles of particles \(i\) and \(j\) respectively.
+- $(y_i)$ and $(y_j)$ are the rapidity values of particles $(i)$ and $(j)$ respectively.
+- $\phi_i and $\phi_j are the azimuthal angles of particles $(i)$ and $(j)$ respectively.
 
 ## Explanation
 
-The distance \(d_{ij}\) represents the distance of particle \(i\) from particle \(j\) in the clustering process. It is computed using the minimum of the transverse momenta of the two particles raised to the power \(p\), scaled by the square of their separation and the radius parameter \(R\).
+The distance $(d_{ij})$ represents the distance of particle $(i)$ from particle $(j)$ in the clustering process. It is computed using the minimum of the transverse momenta of the two particles raised to the power $(p)$, scaled by the square of their separation and the radius parameter $(R)$.
 
 The algorithm then selects the minimum of these distances to proceed with clustering.
 
-Additionally, the algorithm computes \(d_i^B\) as the distance of particle \(i\) from the beam, which is used to determine if a particle should be included in a jet.
+Additionally, the algorithm computes $(d_i^B)$ as the distance of particle $(i)$ from the beam, which is used to determine if a particle should be included in a jet.
  
 
-where \( d_i^B \) is calculated as the transverse momentum squared of particle \( i \). Mathematically, it can be expressed as:
+where $( d_i^B )$ is calculated as the transverse momentum squared of particle $( i )$. Mathematically, it can be expressed as:
 
 \[
-d_i^B = p_{ti}^2
+$d_i^B = p_{ti}^2$
 \]
 
 **The clustering approach consists of the following steps, as explained in the code [1](https://arxiv.org/abs/1111.6097):**
 
 1. **Initialize Parameters**: 
-   - Set the radius parameter \( R \) for the clustering algorithm.
+   - Set the radius parameter $(R)$ for the clustering algorithm.
    - Generate a set of input particles with random momentum values.
 
 2. **Calculate Distances**: 
-   - Calculate the distances between all pairs of particles \( i \) and \( j \) using the generalized \( k_t \) algorithm formula:
+   - Calculate the distances between all pairs of particles $(i)$ and $(j)$ using the $( k_t )$ algorithm formula:
      \[
-     d_{ij} = \min\left(p_{ti}^{p}, p_{tj}^{p}\right) \frac{\Delta_{ij}^2}{R^2}
+     $d_{ij} = \min\left(p_{ti}^{p}, p_{tj}^{p}\right) \frac{\Delta_{ij}^2}{R^2}$
      \]
-     where $( p_{ti}$ and $ p_{tj}$ are the transverse momenta of particles \( i \) and \( j \) respectively, \( \Delta_{ij} \) is the distance between particles \( i \) and \( j \) in the rapidity-azimuth plane, \( R \) is the radius parameter, and \( p \) is the power parameter.
+     where $p_{ti}$ and $p_{tj}$ are the transverse momenta of particles $(i)$ and $(j)$ respectively, $\Delta_{ij}$  is the distance between particles $(i)$ and $(j)$ in the rapidity-azimuth plane, $R$ is the radius parameter, and \( p \) is the power parameter.
 
-3. **Calculate \( d_i^B \)**:
-   - Calculate the distance of each particle \( i \) from the beam (\( d_i^B \)) as the transverse momentum squared (\( p_{ti}^2 \)).
+3. **Calculate $( d_i^B )$**:
+   - Calculate the distance of each particle $(i)$ from the beam $( d_i^B )$ as the transverse momentum squared $(p_{ti}^2)$.
 
 4. **Cluster Particles**:
    - Iterate over the particles and cluster them into jets:
-     - Select the pair of particles \( i \) and \( j \) with the minimum distance \( d_{ij} \).
-     - If the minimum distance \( d_{ij} \) is less than the minimum \( d_i^B \), merge particles \( i \) and \( j \) into a single particle and remove them from the list of particles.
-     - If the minimum distance \( d_{ij} \) is greater than or equal to the minimum \( d_i^B \), add particle \( i \) to the list of jets and remove it from the list of particles.
+     - Select the pair of particles with the minimum distance $( d_{ij} )$.
+     - If the minimum distance $( d_{ij} )$ is less than the minimum $( d_i^B )$, merge particles (i) and (j) into a single particle and remove them from the list of particles.
+     - If the minimum distance $( d_{ij} )$ is greater than or equal to the minimum $( d_i^B )$, add particle $(i)$ to the list of jets and remove it from the list of particles.
 
 5. **Output**:
    - Return the clustered jets sorted by transverse momentum.
