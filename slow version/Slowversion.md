@@ -20,7 +20,7 @@ where:
 The distance $\Delta_{ij}$ is calculated using the following equation:
 
 [
-$\Delta_{ij}^2 = (\y_i - \y_j)^2 + \left(\phi_i - \phi_j\right)^2$
+$\Delta_{ij}^2 = (y_i - y_j)^2 + \left(\phi_i - \phi_j\right)^2$
 ]
 
 where:
@@ -53,7 +53,7 @@ $d_i^B = p_{ti}^2$
      \[
      $d_{ij} = \min\left(p_{ti}^{p}, p_{tj}^{p}\right) \frac{\Delta_{ij}^2}{R^2}$
      \]
-     where $p_{ti}$ and $p_{tj}$ are the transverse momenta of particles $(i)$ and $(j)$ respectively, $\Delta_{ij}$  is the distance between particles $(i)$ and $(j)$ in the rapidity-azimuth plane, $R$ is the radius parameter, and \( p \) is the power parameter.
+     where $p_{ti}$ and $p_{tj}$ are the transverse momenta of particles $(i)$ and $(j)$ respectively, $\Delta_{ij}$  is the distance between particles $(i)$ and $(j)$ in the rapidity-azimuth plane, $R$ is the radius parameter, and  $(p)$ is the power parameter.
 
 3. **Calculate $( d_i^B )$**:
    - Calculate the distance of each particle $(i)$ from the beam $( d_i^B )$ as the transverse momentum squared $(p_{ti}^2)$.
