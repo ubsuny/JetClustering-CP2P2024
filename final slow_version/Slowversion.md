@@ -7,7 +7,7 @@
  This document describes the implementation of a slow version of fastjet library to perform jet clustering and runtime comparison of: a slow version implemented from scratch and a fast version using the FastJet library.
 
  ### kt_Algorithm [1](https://arxiv.org/abs/1111.6097), [3](https://arxiv.org/pdf/0808.0792):
- The generalized $k_t$ algorithm is a jet clustering algorithm that defines a distance measure between particles $(i)$ and $(j)$ as follows:
+ The $k_t$ algorithm is a jet clustering algorithm that defines a distance measure between particles $(i)$ and $(j)$ as follows:
  
 $d_{ij} = \min\left(p_{ti}^{p}, p_{tj}^{p}\right) \frac{\Delta_{ij}^2}{R^2}$
 
