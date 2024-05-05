@@ -7,7 +7,7 @@ import tensorflow as tf
 def generate_random_particles(num_particles):
 
     """
-    Generate random particles with 
+    Generate random particles with
     random transverse momentum, pseudorapidity, and azimuthal angle.
 
     Args:
@@ -62,6 +62,7 @@ def run_jet_clustering_tf(num_particles):
 
     return jets, constituents
 
+
 def delta_r(eta1, phi1, eta2, phi2):
     """
     Calculate deltaR between two sets of pseudorapidities and azimuthal angles.
@@ -79,6 +80,7 @@ def delta_r(eta1, phi1, eta2, phi2):
     dphi = np.abs(phi1 - phi2)
     dphi = np.minimum(dphi, 2 * np.pi - dphi)
     return np.sqrt(deta**2 + dphi**2)
+
 
 def print_jets_tf(jets, constituents):
     """

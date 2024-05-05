@@ -1,6 +1,5 @@
 from input_module import *
-import time 
-import math
+import time
 import numpy as np
 
 
@@ -113,11 +112,10 @@ print("##----------------Slow Version------------------##")
 print("Clustered with", jet_def.description())
 for i, jet in enumerate(slow_jets):
     print(f"jet {i}: pt = {jet.pt()}, y = {jet.rapidity()}, phi = {jet.phi()}")
-
 print(f"Slow clustering runtime: {slow_runtime:.6f} seconds")
-
-
  # #---------------------fastjet---------------------------#
+
+ 
 def fast_jet():
     start_time = time.time()
     R = 0.7
