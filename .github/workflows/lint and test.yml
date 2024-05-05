@@ -24,6 +24,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install flake8 numpy tensorflow
+          pip install fastjet
 
       - name: Run linting
         run: |
