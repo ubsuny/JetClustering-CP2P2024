@@ -23,7 +23,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install flake8 pytest numpy tensorflow
+          pip install flake8 unittest numpy tensorflow
 
       - name: Run linting
         run: flake8 . --count --show-source --statistics --max-line-length=120 --extend-ignore=E203,W503,F401,F405,F403
@@ -31,4 +31,4 @@ jobs:
           FLAKE8_IGNORE: "F401,F405,F403"
 
       - name: Run tests
-        run: pytest /workspaces/JetClustering-CP2P2024/final_slow_version/unittest_slowversion.py
+        run: python -m unittest /workspaces/JetClustering-CP2P2024/final_slow_version/unittest_slowversion.py
