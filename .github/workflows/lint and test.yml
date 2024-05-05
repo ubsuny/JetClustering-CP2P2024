@@ -33,5 +33,6 @@ jobs:
 
       - name: Run tests
         run: |
-          python -m unittest discover -s JetClustering-CP2P2024/final_slow_version -p 'test*.py'
+         python -m unittest discover -s . -p 'test*.py'
+
 
