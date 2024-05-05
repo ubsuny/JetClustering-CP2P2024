@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import MagicMock
 import numpy as np
-from fastjet_slow_version import *
+import fastjet_slow_version
 
 
 class TestSlowJetAlgorithm(unittest.TestCase):
@@ -15,11 +15,11 @@ class TestSlowJetAlgorithm(unittest.TestCase):
 
     def test_phi_mpi_pi(self):
         phi = -3 * np.pi
-        adjusted_phi = phi_mpi_pi(phi)
+        adjusted_phi = fastjet_slow_version.phi_mpi_pi(phi)
         self.assertAlmostEqual(np.abs(adjusted_phi), np.abs(np.pi))
 
     def test_cluster(self):
-        slow_jet_algo = SlowJetAlgorithm(self.input_particles)
+        slow_jet_algo = fastjet_slow_version.SlowJetAlgorithm(self.input_particles)
         jets = slow_jet_algo.cluster(self.R)
         self.assertEqual(len(jets), 3)
         self.assertTrue(all(isinstance(jet, MagicMock) for jet in jets))
