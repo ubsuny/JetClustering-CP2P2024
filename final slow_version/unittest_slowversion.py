@@ -2,6 +2,7 @@ import unittest
 from unittest.mock import MagicMock
 from fastjet_slow_version import *
 
+
 class TestSlowJetAlgorithm(unittest.TestCase):
     def setUp(self):
         self.input_particles = [
@@ -24,6 +25,7 @@ class TestSlowJetAlgorithm(unittest.TestCase):
         jets = slow_jet_algo.cluster(self.R)
         self.assertEqual(len(jets), 3)
         self.assertTrue(all(isinstance(jet, MagicMock) for jet in jets))
+
 
 if __name__ == '__main__':
     unittest.main()
