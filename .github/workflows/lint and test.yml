@@ -24,12 +24,6 @@ jobs:
       - name: Install dependencies
         run: |
           pip install flake8 pytest numpy tensorflow
-          pip install fastjet 
-
-      - name: Debug Logs
-        run: |
-          python -c "import fastjet"
-          echo "fastjet version: $(python -c 'import fastjet; print(fastjet.__version__)')"
 
       - name: Run tests and linting
         run: |
