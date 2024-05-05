@@ -20,7 +20,13 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.x
-
+       
+      - name: Install fastjet_slow_version module
+        run: |
+              cp -r /workspaces/JetClustering-CP2P2024/final_slow_version/fastjet_slow_version.py /workspaces/JetClustering-CP2P2024/final_slow_version/
+              cd /workspaces/JetClustering-CP2P2024/final_slow_version/fastjet_slow_version
+              python setup.py install
+              
       - name: Install dependencies
         run: |
           pip install flake8 numpy tensorflow
