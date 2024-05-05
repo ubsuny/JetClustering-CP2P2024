@@ -1,8 +1,7 @@
 #module imput
 import numpy as np
 import fastjet as fj
-import time
-import math
+
 
 def create_input_particles(num_particles):
     particles = []

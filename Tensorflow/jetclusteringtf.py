@@ -4,6 +4,15 @@ import numpy as np
 import tensorflow as tf
 
 def generate_random_particles(num_particles):
+    """
+    Generate random particles with random transverse momentum, pseudorapidity, and azimuthal angle.
+
+    Args:
+        num_particles (int): Number of particles to generate.
+
+    Returns:
+        numpy.ndarray: Array of shape (num_particles, 3) containing pt, eta, and phi of particles.
+    """
     pt = np.random.uniform(low=0, high=100, size=num_particles)
     eta = np.random.uniform(low=-1, high=1, size=num_particles)
     phi = np.random.uniform(low=0, high=2 * np.pi, size=num_particles)
@@ -11,6 +20,15 @@ def generate_random_particles(num_particles):
     return particles
 
 def run_jet_clustering_tf(num_particles):
+    """
+    Cluster particles using TensorFlow.
+
+    Args:
+        num_particles (int): Number of particles to cluster.
+
+    Returns:
+        tuple: Tuple containing list of jets and list of constituent particles for each jet.
+    """
     # Generate random particles
     particles = generate_random_particles(num_particles)
 
@@ -41,12 +59,31 @@ def run_jet_clustering_tf(num_particles):
     return jets, constituents
 
 def delta_r(eta1, phi1, eta2, phi2):
+    """
+    Calculate deltaR between two sets of pseudorapidities and azimuthal angles.
+
+    Args:
+        eta1 (float): Pseudorapidity of the first set of particles.
+        phi1 (float): Azimuthal angle of the first set of particles.
+        eta2 (float): Pseudorapidity of the second set of particles.
+        phi2 (float): Azimuthal angle of the second set of particles.
+
+    Returns:
+        float: DeltaR between the two sets of particles.
+    """
     deta = eta1 - eta2
     dphi = np.abs(phi1 - phi2)
     dphi = np.minimum(dphi, 2 * np.pi - dphi)
     return np.sqrt(deta**2 + dphi**2)
 
 def print_jets_tf(jets, constituents):
+    """
+    Print out the information of clustered jets and their constituents.
+
+    Args:
+        jets (list): List of jets, each represented by [pt, y, phi].
+        constituents (list): List of constituent particles for each jet.
+    """
     print("        pt y phi")
     for i, jet in enumerate(jets):
         pt = jet[0]

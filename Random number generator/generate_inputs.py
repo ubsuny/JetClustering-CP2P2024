@@ -1,12 +1,8 @@
 #module input
-'''this code generates input particles for jet clustering 
-this code randomly generates px,py,pz values for the particles '''
-
+#this code generates input particles for jet clustering 
+#this code randomly generates px,py,pz values for the particles
 import numpy as np
 import fastjet as fj
-import time
-import math
-
 def create_input_particles(num_particles):
     particles = []
     for _ in range(num_particles):
