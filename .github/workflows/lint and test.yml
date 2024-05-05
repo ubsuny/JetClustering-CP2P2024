@@ -20,15 +20,19 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.x
-       
+
       - name: Install dependencies
         run: |
           pip install flake8 numpy tensorflow
 
       - name: Run linting
-        run: flake8 . --count --show-source --statistics --max-line-length=120 --extend-ignore=E203,W503,F401,F405,F403
+        run: |
+          flake8 . --count --show-source --statistics --max-line-length=120 --extend-ignore=E203,W503,F401,F405,F403
         env:
           FLAKE8_IGNORE: "F401,F405,F403"
 
       - name: Run tests
-        run: python -m unittest final_slow_version/unittest_slowversion.py
+        run: |
+          python -m unittest final_slow_version/unittest_slowversion.py
+        env:
+          PYTHONPATH: .
