@@ -33,6 +33,5 @@ jobs:
 
       - name: Run tests
         run: |
-          python -m unittest unittest_slowversion.py
-        env:
-          PYTHONPATH: /workspaces/JetClustering-CP2P2024/final_slow_version
+          python -m unittest discover -s /workspaces/JetClustering-CP2P2024/final_slow_version -p 'test*.py'
+
