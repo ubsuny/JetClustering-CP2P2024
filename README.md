@@ -15,10 +15,10 @@ The FastJet implementation utilizes the FastJet library, a widely used software 
 
 ## Project Workflow
 
-1. **Generate Input Particles**:
+1. **Generate Input Particles** [input module](https://github.com/ubsuny/JetClustering-CP2P2024/blob/4fec4c4ee56dfc374b23889d9a9fb10203a362a2/final_slow_version/input_module.py):
    - Generate a set of random input particles with momentum values.
 
-2. **Run Slow Version**:
+2. **Run Slow Version** [code file](https://github.com/ubsuny/JetClustering-CP2P2024/blob/4fec4c4ee56dfc374b23889d9a9fb10203a362a2/final_slow_version/fastjet_slow_version.py):
    - Cluster particles using the slow version of the jet clustering algorithm.
    - Measure the runtime and collect the clustered jets.
 
@@ -26,7 +26,7 @@ The FastJet implementation utilizes the FastJet library, a widely used software 
    - Cluster particles using the FastJet library and the `kt_algorithm`.
    - Measure the runtime and collect the clustered jets.
 
-4. **Compare Results**:
+4. **Compare Results** [Results file](https://github.com/ubsuny/JetClustering-CP2P2024/blob/4fec4c4ee56dfc374b23889d9a9fb10203a362a2/final_slow_version/output_fastsjet_slowversion.txt):
    - Compare the runtime and accuracy of the clustered jets between the slow version and FastJet implementation.
    - Analyze any differences and draw conclusions.
 
@@ -34,7 +34,5 @@ The FastJet implementation utilizes the FastJet library, a widely used software 
 
 It is expected that the FastJet implementation will demonstrate significantly faster runtime compared to the slow version due to its optimized algorithms. Additionally, the accuracy of the clustered jets should be comparable between the two implementations.
 
-## Conclusion
-
-Results: output_fastsjet_slowversion.txt, 
+## Conclusion 
 This project aims to provide insights into the performance difference between a simple implementation of a jet clustering algorithm and a highly optimized library-based implementation. It highlights the importance of choosing appropriate algorithms and libraries for efficient data processing in high-energy physics experiments.
