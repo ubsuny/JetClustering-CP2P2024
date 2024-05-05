@@ -26,9 +26,9 @@ jobs:
           pip install flake8 pytest numpy tensorflow fastjet
 
       - name: Run flake8 with custom configuration
-        run: flake8 . --count --show-source --statistics --max-line-length=88 --extend-ignore=E203,W503
+        run: flake8 .
         env:
-          FLAKE8_IGNORE: "F401,F405"
+          FLAKE8_IGNORE: "F401,F405,F403,F501"
 
       - name: Run pytest
         run: pytest
