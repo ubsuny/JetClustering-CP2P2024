@@ -23,7 +23,7 @@ jobs:
        
       - name: Install fastjet_slow_version module
         run: |
-             cd /workspaces/JetClustering-CP2P2024/final_slow_version/fastjet_slow_version
+             cd /workspaces/JetClustering-CP2P2024/final_slow_version/fastjet_slow_version.py
              python setup.py install
 
       - name: Install dependencies
