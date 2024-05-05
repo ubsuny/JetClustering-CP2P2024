@@ -1,19 +1,21 @@
-# this code generates input particles for jet clustering
-# this code randomly generates px,py,pz values for the particles
+# module input
+
+'''This module generates input particles for jet clustering.
+This code randomly generates px, py, pz values for the particles.'''
+
 import numpy as np
 import fastjet as fj
 
 
 def create_input_particles(num_particles):
-    """
-    Generate random input particles for jet clustering.
-
+    '''Generate input particles for jet clustering.
+    
     Args:
         num_particles (int): Number of particles to generate.
-
+    
     Returns:
-        List of fastjet.PseudoJet objects representing the input particles.
-    """
+        list: List of PseudoJet objects representing particles.
+    '''
     particles = []
     for _ in range(num_particles):
         px = np.random.uniform(-100.0, 100.0)
@@ -24,6 +26,6 @@ def create_input_particles(num_particles):
     return particles
 
 
-R = 0.7  # Jet clustering radius
-num_particles = 200  # Number of particles
+R = 0.7
+num_particles = 200
 input_particles = create_input_particles(num_particles)
