@@ -2,7 +2,9 @@
 
 ## Project Description and overview:
 this project aims to perform the following:
+
 1- implementation of slow version of Kt-Algortihm that performs Jet Clustering
+
 2- Comparison between the clustering runtime of the slow version and the original fastjet library
 
 ## Slow Version Implementation
@@ -15,10 +17,10 @@ The FastJet implementation utilizes the FastJet library, a widely used software 
 
 ## Project Workflow
 
-1. **Generate Input Particles** [input module](https://github.com/ubsuny/JetClustering-CP2P2024/blob/4fec4c4ee56dfc374b23889d9a9fb10203a362a2/final_slow_version/input_module.py):
+1. **Generate Input Particles** {[input module](https://github.com/ubsuny/JetClustering-CP2P2024/blob/4fec4c4ee56dfc374b23889d9a9fb10203a362a2/final_slow_version/input_module.py)}:
    - Generate a set of random input particles with momentum values.
 
-2. **Run Slow Version** [code file](https://github.com/ubsuny/JetClustering-CP2P2024/blob/4fec4c4ee56dfc374b23889d9a9fb10203a362a2/final_slow_version/fastjet_slow_version.py):
+2. **Run Slow Version** {[code file](https://github.com/ubsuny/JetClustering-CP2P2024/blob/4fec4c4ee56dfc374b23889d9a9fb10203a362a2/final_slow_version/fastjet_slow_version.py)}:
    - Cluster particles using the slow version of the jet clustering algorithm.
    - Measure the runtime and collect the clustered jets.
 
@@ -26,7 +28,7 @@ The FastJet implementation utilizes the FastJet library, a widely used software 
    - Cluster particles using the FastJet library and the `kt_algorithm`.
    - Measure the runtime and collect the clustered jets.
 
-4. **Compare Results** [Results file](https://github.com/ubsuny/JetClustering-CP2P2024/blob/4fec4c4ee56dfc374b23889d9a9fb10203a362a2/final_slow_version/output_fastsjet_slowversion.txt):
+4. **Compare Results** {[Results file](https://github.com/ubsuny/JetClustering-CP2P2024/blob/4fec4c4ee56dfc374b23889d9a9fb10203a362a2/final_slow_version/output_fastsjet_slowversion.txt)}:
    - Compare the runtime and accuracy of the clustered jets between the slow version and FastJet implementation.
    - Analyze any differences and draw conclusions.
 
