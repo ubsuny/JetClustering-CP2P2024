@@ -7,7 +7,7 @@ this project aims to perform the following:
 
 2- Comparison between the clustering runtime of the slow version and the original fastjet library
 
-## Slow Version Implementation
+## Slow Version Implementation {[more details](https://github.com/ubsuny/JetClustering-CP2P2024/blob/4ca5b77f26a2821b99c282301fa9f1d9aea162f1/final_slow_version/Slowversion.md)}
 
 The slow version implements a simple jet clustering algorithm based on the $k_t$ algorithm. It includes a class `SlowJetAlgorithm` that clusters particles into jets using pairwise distance calculations. The clustering process involves iterating over particles and merging them based on their distances until all particles are clustered. The algorithm also handles periodicity of azimuthal angles and defines a function `phi_mpi_pi` for this purpose.
 
