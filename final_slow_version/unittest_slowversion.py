@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import MagicMock
 import numpy as np
-import fastjet_slow_version
+from fastjet_slow_version import *
 
 
 class TestSlowJetAlgorithm(unittest.TestCase):
