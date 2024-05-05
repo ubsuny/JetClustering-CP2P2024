@@ -3,10 +3,11 @@ name: Lint and Test
 on:
   push:
     branches:
-      - main  
+      - main 
   pull_request:
     branches:
       - main  
+
 jobs:
   lint_and_test:
     runs-on: ubuntu-latest
@@ -24,6 +25,11 @@ jobs:
         run: |
           pip install flake8 pytest numpy tensorflow
           pip install fastjet 
+
+      - name: Debug Logs
+        run: |
+          python -c "import fastjet"
+          echo "fastjet version: $(python -c 'import fastjet; print(fastjet.__version__)')"
 
       - name: Run tests and linting
         run: |
