@@ -9,10 +9,10 @@ import fastjet as fj
 
 def create_input_particles(num_particles):
     '''Generate input particles for jet clustering.
-    
+
     Args:
         num_particles (int): Number of particles to generate.
-    
+
     Returns:
         list: List of PseudoJet objects representing particles.
     '''
