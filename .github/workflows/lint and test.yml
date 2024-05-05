@@ -24,6 +24,8 @@ jobs:
       - name: Install dependencies
         run: |
           pip install flake8 numpy tensorflow
+          sudo apt-get install build-essential gcc python3-dev python3-pip libfastjet-dev  # Install required system dependencies (example for Ubuntu/Debian)
+          pip install numpy setuptools wheel  # Install necessary Python packages
           pip install fastjet
 
       - name: Run linting
