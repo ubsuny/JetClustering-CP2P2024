@@ -4,8 +4,10 @@ import numpy as np
 import tensorflow as tf
 
 def generate_random_particles(num_particles):
+
     """
-    Generate random particles with random transverse momentum, pseudorapidity, and azimuthal angle.
+    Generate random particles with 
+    random transverse momentum, pseudorapidity, and azimuthal angle.
 
     Args:
         num_particles (int): Number of particles to generate.
