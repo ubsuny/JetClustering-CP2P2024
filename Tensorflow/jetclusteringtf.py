@@ -3,6 +3,7 @@ import random
 import numpy as np
 import tensorflow as tf
 
+
 def generate_random_particles(num_particles):
 
     """
@@ -20,6 +21,7 @@ def generate_random_particles(num_particles):
     phi = np.random.uniform(low=0, high=2 * np.pi, size=num_particles)
     particles = np.stack([pt, eta, phi], axis=1)
     return particles
+
 
 def run_jet_clustering_tf(num_particles):
     """
@@ -94,6 +96,7 @@ def print_jets_tf(jets, constituents):
         print(f"jet {i}: {pt} {y} {phi}")
         for j, constituent in enumerate(constituents[i]):
             print(f"    constituent {j}'s pt: {constituent[0]}")
+
 
 num_particles = 10  # Set the number of particles
 

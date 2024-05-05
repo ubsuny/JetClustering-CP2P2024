@@ -2,7 +2,9 @@ from input_module import *
 import time 
 import math
 import numpy as np
-##-----------------------Slow version--------------------------##
+
+
+# ##-----------------------Slow version--------------------------##
 # Define phi_mpi_pi function to handle the periodicity of the azimuthal angle
 def phi_mpi_pi(phi):
     """
@@ -20,6 +22,7 @@ def phi_mpi_pi(phi):
     while phi > np.pi:
         phi -= 2 * np.pi
     return phi
+
 
 class SlowJetAlgorithm:
     """
@@ -98,6 +101,7 @@ class SlowJetAlgorithm:
 
         return jets
 
+
 # Usage example
 slow_jet_algo = SlowJetAlgorithm(input_particles)
 start_time = time.time()
@@ -111,11 +115,13 @@ for i, jet in enumerate(slow_jets):
     print(f"jet {i}: pt = {jet.pt()}, y = {jet.rapidity()}, phi = {jet.phi()}")
 
 print(f"Slow clustering runtime: {slow_runtime:.6f} seconds")
- #---------------------fastjet---------------------------#
+
+
+ # #---------------------fastjet---------------------------#
 def fast_jet():
     start_time = time.time()
     R = 0.7
-    p = 1  # p = 1 for generalized kt algorithm
+    # p = 1 for generalized kt algorithm
     jet_def = fj.JetDefinition(fj.kt_algorithm, R)
     cs = fj.ClusterSequence(input_particles, jet_def)
     jets = sorted(cs.inclusive_jets(), key=lambda jet: -jet.pt())
@@ -131,5 +137,6 @@ def fast_jet():
             # for j, constituent in enumerate(constituents):
             #     print(f"  constituent {j}'s pt: {constituent.pt()}")
     print(f"fastjet runtime: {runtime:.6f} seconds")
+
 
 fast_jet()

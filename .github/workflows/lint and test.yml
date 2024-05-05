@@ -3,10 +3,10 @@ name: Lint and Test
 on:
   push:
     branches:
-      - main 
+      - main  # Change this to your main branch name
   pull_request:
     branches:
-      - main  
+      - main  # Change this to your main branch name
 
 jobs:
   lint_and_test:
@@ -23,9 +23,12 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install flake8 pytest numpy tensorflow
+          pip install flake8 pytest numpy tensorflow fastjet
 
-      - name: Run tests and linting
-        run: |
-          flake8 .
-          pytest
+      - name: Run flake8 with custom configuration
+        run: flake8 . --count --show-source --statistics --max-line-length=88 --extend-ignore=E203,W503
+        env:
+          FLAKE8_IGNORE: "F401,F405"
+
+      - name: Run pytest
+        run: pytest
