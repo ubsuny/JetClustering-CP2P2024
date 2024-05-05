@@ -29,7 +29,9 @@ jobs:
         # Add error handling and update package lists before installing libm-dev
         sudo apt-get update || echo "apt-get update failed. Continuing anyway..."
         sudo apt-get install -y libm-dev || echo "libm-dev not found. Continuing anyway..."
-        sudo apt-get install -y libexecinfo-dev  # for execinfo.h
+        # Add error handling and update package lists before installing libexecinfo-dev
+        sudo apt-get update || echo "apt-get update failed. Continuing anyway..."
+        sudo apt-get install -y libexecinfo-dev || echo "libexecinfo-dev not found. Continuing anyway..."
         # Install CGAL
         sudo apt-get install -y libcgal-dev
         sudo apt-get install -y libcgal-qt5-dev  # If you need CGAL with Qt support
