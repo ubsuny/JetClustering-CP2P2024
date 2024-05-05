@@ -3,40 +3,63 @@ name: Lint and Test
 on:
   push:
     branches:
-      - main  # Change this to your main branch name
-  pull_request:
-    branches:
-      - main  # Change this to your main branch name
+      - main
 
 jobs:
-  lint_and_test:
+  build:
     runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        cgal-version: [5.5.1]  # Adjust the CGAL version as needed
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.x
+    - name: Install build dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install flake8 numpy tensorflow
+        pip install setuptools wheel
+        pip install --upgrade setuptools
+        sudo apt-get update
+        sudo apt-get install -y build-essential
+        sudo apt-get install -y g++
+        sudo apt-get install -y libm-dev
+        sudo apt-get install -y libexecinfo-dev  # for execinfo.h
+        # Install CGAL
+        sudo apt-get install -y libcgal-dev
+        sudo apt-get install -y libcgal-qt5-dev  # If you need CGAL with Qt support
+        # Additional compiler arguments for thread safety (if needed)
+        # Add your custom commands here for additional configurations
+        
+    - name: Install FastJet dependencies
+      run: |
+        sudo apt-get install -y libgmp-dev
+        sudo apt-get install -y libmpfr-dev
+        sudo apt-get install -y swig
+        # Install FastJet via pip
+        pip install fastjet
+      
+    - name: Configure FastJet
+      run: |
+        ./configure
+        # Add any additional configuration steps here
 
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install flake8 numpy tensorflow
-          pip install setuptools wheel
-          pip install --upgrade setuptools
-          pip install fastjet
+    - name: Build FastJet
+      run: |
+        make
 
-      - name: Run linting
-        run: |
-          flake8 . --count --show-source --statistics --max-line-length=120 --extend-ignore=E203,W503,F401,F405,F403
-        env:
-          FLAKE8_IGNORE: "F401,F405,F403"
 
-      - name: Run tests
-        run: |
-         python -m unittest discover -s final_slow_version -p 'test*.py'
+    - name: Run linting
+      run: |
+        flake8 . --count --show-source --statistics --max-line-length=120 --extend-ignore=E203,W503,F401,F405,F403
+      env:
+        FLAKE8_IGNORE: "F401,F405,F403"
+
+    - name: Run tests
+      run: |
+        python -m unittest discover -s final_slow_version -p 'test*.py'
 
 
