@@ -3,11 +3,10 @@ name: Lint and Test
 on:
   push:
     branches:
-      - main  # Change this to your main branch name
+      - main  
   pull_request:
     branches:
-      - main  # Change this to your main branch name
-
+      - main  
 jobs:
   lint_and_test:
     runs-on: ubuntu-latest
@@ -24,12 +23,9 @@ jobs:
       - name: Install dependencies
         run: |
           pip install flake8 pytest numpy tensorflow
-          pip install fastjet  # If fastjet is available through pip
-          # Additional setup for fastjet if needed
+          pip install fastjet 
 
-      - name: Run flake8
+      - name: Run tests and linting
         run: |
-          flake8 . --count --show-source --statistics --max-line-length=88 --extend-ignore=E203,W503
-
-      - name: Run pytest
-        run: pytest
+          flake8 .
+          pytest
