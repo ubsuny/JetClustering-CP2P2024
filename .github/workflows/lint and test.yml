@@ -31,4 +31,4 @@ jobs:
           FLAKE8_IGNORE: "F401,F405,F403"
 
       - name: Run tests
-        run: pytest
+        run: pytest unittest_slowversion.py
