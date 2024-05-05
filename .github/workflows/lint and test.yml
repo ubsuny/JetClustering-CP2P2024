@@ -45,17 +45,6 @@ jobs:
         sudo apt-get install -y swig
         # Install FastJet via pip
         pip install fastjet
-      
-    - name: Configure FastJet
-      run: |
-        # Replace the following line with the appropriate command for configuring FastJet
-        echo "Configure FastJet here"
-
-    - name: Build FastJet
-      run: |
-        # Add error handling for configuration and building steps
-        set -e
-        make
 
     - name: Run linting
       run: |
