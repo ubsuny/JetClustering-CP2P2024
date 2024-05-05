@@ -33,6 +33,6 @@ jobs:
 
       - name: Run tests
         run: |
-          python -m unittest final_slow_version/unittest_slowversion.py
+          python -m unittest unittest_slowversion.py
         env:
           PYTHONPATH: .
