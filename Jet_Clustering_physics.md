@@ -85,7 +85,24 @@ jet_def = fj.JetDefinition(fj.kt_algorithm, R)
 cs = fj.ClusterSequence(input_particles, jet_def)
 jets = cs.inclusive_jets()
 ```
+## Slow version:
+### Implementation: 
+for this project, we created a slow version of the fastjet Kt-algorithm by following this approach:
+#### 1- Generate Particles [input_module.py](https://github.com/ubsuny/JetClustering-CP2P2024/blob/77672ffbcf7fa045397add3203e9a4f80251d251/final_slow_version/input_module.py)
 
+use random number generator to generate ```num_particles``` of 4 momenta of particles (px,py,pz,E) and save the particles as pseudo-jets. 
+
+#### 2- implement the Kt-algorithm [fastjet_slow_version.py](https://github.com/ubsuny/JetClustering-CP2P2024/blob/77672ffbcf7fa045397add3203e9a4f80251d251/final_slow_version/fastjet_slow_version.py)
+using the equation of the kt-algorithm stated above, I implemented the slow version of it
+
+#### 3- run and compare: [output_fastjet_slowversion.txt](https://github.com/ubsuny/JetClustering-CP2P2024/blob/77672ffbcf7fa045397add3203e9a4f80251d251/final_slow_version/output_fastsjet_slowversion.txt)
+I used both the implemented code for the slow version and the fastjet library to generate the jets and compare the run time of them.
+
+### Results: [output_fastjet_slowversion.txt](https://github.com/ubsuny/JetClustering-CP2P2024/blob/77672ffbcf7fa045397add3203e9a4f80251d251/final_slow_version/output_fastsjet_slowversion.txt)
+
+The slow version worked perfectly fine; it generated the same jets as fastjet library but our slow version took a much longer time to generate the jets.
+However, the runtime of the slow version is around 1000 times the runtime of the original fastjet library.
+this was expected because of the lack of optimization of our code, unlike the highly optimized fastjet library. 
 
 
 
